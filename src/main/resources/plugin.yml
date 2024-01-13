@@ -1,6 +1,6 @@
 name: Star
 version: 1.0.0
-main: io.star
+main: net.Star.Star
 description: Star's Core
 author: Starlight
 api-version: '1.20'
