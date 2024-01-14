@@ -20,6 +20,7 @@ public class Star extends JavaPlugin implements Listener {
         commandManager = new PaperCommandManager(this);
 
         registerCommands();
+
     }
 
     @EventHandler
