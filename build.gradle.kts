@@ -21,6 +21,8 @@ dependencies {
 
     compileOnly("org.projectlombok:lombok:1.18.24")
     annotationProcessor("org.projectlombok:lombok:1.18.24")
+
+    implementation("com.google.code.gson:gson:2.8.9")
 }
 
 tasks {
@@ -31,7 +33,11 @@ tasks {
 
     shadowJar {
         relocate("co.aikar.commands", "net.star.shaded.acf")
-        relocate("co.aikar.locales", "net.star.shaded.locales")
+        relocate("co.aikar.locales", "net.star.locales")
+        relocate("org.bson", "net.star.neon.bson")
+        relocate("org.json", "net.star.shaded.json")
+        relocate("com.google.code.gson", "net.star.shaded.gson")
+        relocate("com.google.gson", "net.star.shaded.gson")
     }
 
     compileJava {
