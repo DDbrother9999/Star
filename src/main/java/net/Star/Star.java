@@ -2,6 +2,7 @@ package net.Star;
 
 import co.aikar.commands.PaperCommandManager;
 
+import net.Star.Commands.BalanceCommand;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
@@ -27,6 +28,7 @@ public class Star extends JavaPlugin implements Listener {
     }
     private void registerCommands() {
         commandManager.registerCommand(new TestCommand());
+        commandManager.registerCommand(new BalanceCommand());
     }
 
 }

@@ -11,7 +11,7 @@ public class TestCommand extends BaseCommand{
 
     @Subcommand("help")
     public void onTestHelp(Player player){
-        player.sendMessage(Component.text("Hello, " + player + "!" + "You've done the command /test help"));
+        player.sendMessage(Component.text("Hello, " + player.getName() + "!" + "You've done the command /test help"));
     }
 
 }
