@@ -22,12 +22,26 @@ public class User {
     private double Deaths;
 
     public User(UUID uuid, String name) {
-     this.uuid = uuid;
-     this.name = name;
+        this.uuid = uuid;
+        this.name = name;
 
-     load();
+        loadData();
     }
-    private void load() {
+    private void loadData () {
         var yaml = plugin.getData().getPlayerYaml(uuid.toString());
+
+        Kills = yaml.getOrDefault("kills", 0);
+        Deaths = yaml.getOrDefault("Deaths", 0);
+        Balance = yaml.getOrDefault("Balance", 0);
+        }
+    public void saveData() {
+        var yaml = plugin.getData().getPlayerYaml(uuid.toString());
+
+        yaml.set("name", getName());
+        yaml.set("kills", Kills);
+        yaml.set("deaths", Deaths);
+        yaml.set("Balance", Balance);
     }
 }
+
+

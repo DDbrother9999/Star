@@ -26,7 +26,7 @@ public class Star extends JavaPlugin implements Listener {
 
     private static Star instance;
     private PaperCommandManager commandManager;
-    private UserManager manager;
+    private UserManager userManager;
 
     private Data data = new Data();
     @Override
